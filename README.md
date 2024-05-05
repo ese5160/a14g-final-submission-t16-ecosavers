@@ -4,7 +4,7 @@
     * Team Number: 16
     * Team Name: EcoSavers
     * Team Members: Erica Feng, Xinyu Chen
-    * Github Repository URL: 
+    * Github Repository URL: https://github.com/ese5160/a14g-final-submission-t16-ecosavers
     * Description of test hardware: (development boards, sensors, actuators, laptop + OS, etc)   Embedded hardware, laptops, MCU and Wi-Fi, QR code reader to I2C, Distance sensor, Temperature and Humidity sensor and LED
 
 
