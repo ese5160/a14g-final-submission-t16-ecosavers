@@ -61,3 +61,12 @@ Cloud Server: Data collected from the smart bin, including sensor readings, oper
 ## 3. Hardware & Software Requirements
 
 ## 4. Project Photos & Screenshots
+- Project Photos:
+- ![IMG_8498](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/9c15b9a5-5bf4-448f-b8d2-d20b55a3be87)
+- ![IMG_8503](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/d296a31f-806b-46aa-afff-4e076c79f219)
+- ![IMG_8500](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/0cb3baad-e006-4a4f-91f0-09c5daf80209)
+- ![IMG_8502](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/ed49738e-6fd4-4608-91b7-45a35e2a5876)
+
+
+
+
