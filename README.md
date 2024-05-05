@@ -18,9 +18,31 @@
    - Our inspiration for the smart bin project arose from a shared concern among our team of students about the environmental impact of inefficient waste management practices. We were motivated by the desire to find innovative solutions to address this pressing issue and contribute to a cleaner, healthier planet. Also, our project was driven by a genuine passion for sustainability and a desire to create positive change. We believed that by developing a smart bin that automates waste sorting and promotes recycling, we could help reduce pollution and conserve valuable resources. Throughout the project, we remained focused on the needs of our users. We understood that for our solution to be effective, it needed to be user-friendly and easily integrated into everyday life. This led us to incorporate features like QR code scanning for status reset and a simple, intuitive interface.
 
 - Device Functionality
-   - Explain how your Internet-connected device is designed
-   - Include sensors, actuators, and other critical components.
-   - Your block diagram from earlier in this semester will be quite helpful here!
+1. Sensors:
+
+Humidity Sensor: This sensor detects the moisture content of the garbage deposited into the bin. It helps in distinguishing between wet and dry waste, facilitating accurate sorting.
+Temperature Sensor: The temperature sensor measures the temperature of the garbage, providing additional data for waste classification and environmental monitoring.
+2. Actuators:
+
+Stepper Motor: The stepper motor is responsible for driving the platform within the bin to facilitate automatic sorting. Based on the readings from the humidity and temperature sensors, the stepper motor adjusts the position of the platform to direct garbage into the appropriate compartment.
+3. Microcontroller:
+
+Central Processing Unit (CPU): A microcontroller serves as the brain of the smart bin, coordinating the operation of sensors, actuators, and other components. It processes data from sensors, executes sorting algorithms, and controls the movement of the stepper motor.
+4. Connectivity Module:
+
+Wi-Fi Module: An onboard Wi-Fi module enables Internet connectivity, allowing the smart bin to communicate with external devices and platforms. It facilitates data transmission to cloud-based servers for analysis and enables remote monitoring and control via web or mobile applications.
+5. User Interface:
+
+Web/Mobile Application: A user-friendly interface accessible through web or mobile applications provides users with real-time data on waste composition, bin status, and system performance. Users can also remotely control certain aspects of the smart bin, such as initiating cleaning cycles or adjusting sorting parameters.
+6. Power Supply:
+
+Power Management Unit: A power management unit regulates the voltage supplied to various components of the smart bin, ensuring stable and efficient operation. It may include features such as battery charging and energy-saving modes.
+7. QR Code Scanner:
+
+QR Code Reader: A QR code scanner is integrated into the smart bin, allowing users to perform tasks such as resetting the status of the bin or accessing maintenance information. Users can simply scan the QR code located on the bin using a compatible device to execute these actions.
+8. Cloud Platform:
+
+Cloud Server: Data collected from the smart bin, including sensor readings, operational logs, and user interactions, is transmitted to a cloud-based server for storage and analysis. Cloud-based analytics enable optimization of waste management strategies and provide insights for continuous improvement.
 - Challenges
    - Where did you face difficulties? This could be in firmware, hardware, software, integration, etc.
    - How did you overcome these challenges?
