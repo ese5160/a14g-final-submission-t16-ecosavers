@@ -17,7 +17,7 @@
    - By leveraging the Internet in combination with automatic sorting technology and QR code functionality, our smart bin offers a comprehensive solution for efficient waste management. It not only simplifies waste disposal for users but also enhances operational efficiency and contributes to a more sustainable environment.
 
 - Inspiration
-   - What inspired you to do the project?
+   - Our inspiration for the smart bin project arose from a shared concern among our team of students about the environmental impact of inefficient waste management practices. We were motivated by the desire to find innovative solutions to address this pressing issue and contribute to a cleaner, healthier planet. Also, our project was driven by a genuine passion for sustainability and a desire to create positive change. We believed that by developing a smart bin that automates waste sorting and promotes recycling, we could help reduce pollution and conserve valuable resources. Throughout the project, we remained focused on the needs of our users. We understood that for our solution to be effective, it needed to be user-friendly and easily integrated into everyday life. This led us to incorporate features like QR code scanning for status reset and a simple, intuitive interface.
 
 - Device Functionality
    - Explain how your Internet-connected device is designed
