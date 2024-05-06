@@ -27,7 +27,7 @@
    - Stepper Motor: The stepper motor is responsible for driving the platform within the bin to facilitate automatic sorting. Based on the detection from the humidity and temperature sensors, the stepper motor adjusts the position of the platform to direct garbage into the appropriate bin.
 
 - Microcontroller (MCU):
-   - : A microcontroller serves as the brain of the smart bin, coordinating the operation of sensors, actuators, and other components. It processes data from sensors, executes sorting algorithms, and controls the movement of the stepper motor.
+   - A microcontroller serves as the brain of the smart bin, coordinating the operation of sensors, actuators, and other components. It processes data from sensors, executes sorting algorithms, and controls the movement of the stepper motor.
 
 - Connectivity Module:
    - Wi-Fi Module: An onboard Wi-Fi module enables Internet connectivity, allowing the smart bin to communicate with external devices and platforms. It facilitates data transmission to cloud-based servers for analysis and enables remote monitoring and control via web or mobile applications.
