@@ -55,7 +55,10 @@ Cloud Server: Data collected from the smart bin, including sensor readings, and 
    - What did you learn in ESE5160 through the lectures, assignments, and this course-long prototyping project?
 - Project Links
    - Provide a URL to your Node-RED instance for our review (make sure it’s running on your Azure instance!)
+   - http://172.212.88.24:1880/
+   - http://172.212.88.24:1880/ui/
    - Include a link to your A12G code repository
+   - https://github.com/ese5160/a12g-firmware-drivers-t16-ecosavers.git
 
 
 ## 3. Hardware & Software Requirements
