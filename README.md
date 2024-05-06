@@ -24,7 +24,7 @@ Humidity Sensor: This sensor detects the moisture content of the garbage deposit
 Temperature Sensor: The temperature sensor measures the temperature of the garbage, providing additional data for waste classification and environmental monitoring.
 2. Actuators:
 
-Stepper Motor: The stepper motor is responsible for driving the platform within the bin to facilitate automatic sorting. Based on the readings from the humidity and temperature sensors, the stepper motor adjusts the position of the platform to direct garbage into the appropriate compartment.
+Stepper Motor: The stepper motor is responsible for driving the platform within the bin to facilitate automatic sorting. Based on the readings from the humidity and temperature sensors, the stepper motor adjusts the position of the platform to direct garbage into the appropriate bin.
 3. Microcontroller:
 
 Central Processing Unit (CPU): A microcontroller serves as the brain of the smart bin, coordinating the operation of sensors, actuators, and other components. It processes data from sensors, executes sorting algorithms, and controls the movement of the stepper motor.
@@ -36,13 +36,13 @@ Wi-Fi Module: An onboard Wi-Fi module enables Internet connectivity, allowing th
 Web/Mobile Application: A user-friendly interface accessible through web or mobile applications provides users with real-time data on waste composition, bin status, and system performance. Users can also remotely control certain aspects of the smart bin, such as initiating cleaning cycles or adjusting sorting parameters.
 6. Power Supply:
 
-Power Management Unit: A power management unit regulates the voltage supplied to various components of the smart bin, ensuring stable and efficient operation. It may include features such as battery charging and energy-saving modes.
+Power Management Unit: A power management unit regulates the voltage supplied to various components of the smart bin, ensuring stable and efficient operation. It include a 5V boost and 3.3V buck for adjusting the system volatge to the volatge required for different components.
 7. QR Code Scanner:
 
-QR Code Reader: A QR code scanner is integrated into the smart bin, allowing users to perform tasks such as resetting the status of the bin or accessing maintenance information. Users can simply scan the QR code located on the bin using a compatible device to execute these actions.
+QR Code Reader: A QR code scanner is integrated into the smart bin, allowing users to perform tasks such as resetting the status of the UI showing. Users can simply use the specific QR code and make it scaned by the QR code reader located on the bin.
 8. Cloud Platform:
 
-Cloud Server: Data collected from the smart bin, including sensor readings, operational logs, and user interactions, is transmitted to a cloud-based server for storage and analysis. Cloud-based analytics enable optimization of waste management strategies and provide insights for continuous improvement.
+Cloud Server: Data collected from the smart bin, including sensor readings, and user interactions, is transmitted to a cloud-based server for storage and analysis. It also helps user easy to control the system and update the firmware. Cloud-based analytics enable optimization of waste management strategies and provide insights for continuous improvement.
 - Challenges
    - Where did you face difficulties? This could be in firmware, hardware, software, integration, etc.
    - How did you overcome these challenges?
@@ -59,6 +59,38 @@ Cloud Server: Data collected from the smart bin, including sensor readings, oper
 
 
 ## 3. Hardware & Software Requirements
+-Hardware Requirements
+- Overview:
+
+The device served as the smart bin with integrated sensors and motors for automated garbage sorting. The moisture sensor, stepper motors, distance sensor and a control interface with PC connectivity would be the key components in this device, and some other components would be used to complete the project.
+
+- Definition:
+
+1. Moisture sensor = MS
+2. Stepper motor = SM
+3. Distance sensor = DS
+
+- Functionality:
+
+1. HRS_01: The device shall categorize the trash in the bins.
+2. HRS_02: The device shall be able to put the sorted garbage into the corresponding bins.
+3. HRS_03: The device shall be initialized when the users scan the QR code.
+
+-Software Requirements
+- Overview:
+
+The software used in this device shall include the user interface for control, monitoring, alerting and functionality to interact with the hardware. In this project, the device will make user interaction and control for garbage sorting and bin reset, real-time monitoring of bin status, and alert reception and notification for full bin capacity. The software used here shall help the completion of the project with the support of wifi.
+
+- Definition:
+
+1. garbage info = number, type and any information about the garbage
+2. alert = cleaning reminder
+
+- Functionality:
+
+1. SRS_01: The device shall transmit the information (number, type) of the garbage in the bins. 
+2. SRS_02: The device shall remind the user when the either bin is full.
+3. SRS_03: The device shall reset the status of the bins on the software once the QR code scanned.
 
 ## 4. Project Photos & Screenshots
 - Project Photos:
