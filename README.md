@@ -81,6 +81,18 @@ The device served as the smart bin with integrated sensors and motors for automa
 2. HRS_02: The device shall be able to put the sorted garbage into the corresponding bins.
 3. HRS_03: The device shall be initialized when the users scan the QR code.
 
+- Review:
+We satisfy the requirements of automated garbage sorting and initialization by scanning QR code. However, we deleted the function of alerting user when the bin is full, because the TX and RX pin of uart were selected incorrectly in A01G.
+1. HRS_01: The on-board humidity and temperature sensor can detect the humidity of the garbage located on the platform and collect the moisture and the temperature into MCU. The data measured by the sensor will be printed in the Node Red UI, and the LED in UI will indicate what is the category of the garbage. In our testing, we put the dry paper and wet paper as the garbage close to the sensor, and the humidity and temperature were measured and presented on the two gauges in UI page.
+![image](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/a3103f60-7df5-438b-aae3-fc065aa91960)
+
+2. HRS_02: The direction of the stepper motor rotating can be controlled based on the humidity data measured by the sensor, which controls the garbage located on the platform slide down to corresponding bin. In our testing, we put the dry paper and wet paper as the garbage close to the sensor, and the stepper motor rotated clockwise or counter clockwise according to the humidity measured by the sensor.
+![4d0c67feec7808b1bd10f5d20439f18](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/ecfdcdbb-874d-49ef-8210-810d1555e500)
+![1d3e01860e7111351e88e4c7ea5e4ee](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/1ddf96c5-d1c5-451d-a243-26fec03c52dc)
+
+4. HRS_03: All the data on UI can be initialized to 0 after scanning the specific QR code. After testing the humidity and temperature of the garbage, we can see the values of them are presented in UI. Then we scanned the unique QR code we prepared, all the data shown on the gauges in UI was initialized to 0.
+ ![image](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/66eb6f5b-a836-4d18-be5a-505d525703b5)
+
 -Software Requirements
 - Overview:
 
@@ -97,6 +109,13 @@ The software used in this device shall include the user interface for control, m
 2. SRS_02: The device shall remind the user when the either bin is full.
 3. SRS_03: The device shall reset the status of the bins on the software once the QR code scanned.
 
+- Review:
+We satisfy the requirements of user interfacing, monitoring, and functionality to interact with the hardware. However, we failed the alert reception and notification for full bin capacity.
+1. SRS_01: Our device can transmit the integer data of current humidity and temperature to the Node Red and present them on UI page. In our testing, we put the dry paper and wet paper as the garbage close to the sensor, and the measurements of humidity and temperature were collected and presented on the two gauges in UI page.
+![image](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/a3103f60-7df5-438b-aae3-fc065aa91960)
+2. SRS_02: We failed this requirement because we could not use our distance sensors. We removed the distance sensors from our system because the uart interface was selected incorrectly in A01G. 
+3. SRS_03: All the data on UI can be initialized to 0 after scanning the specific QR code. After testing the humidity and temperature of the garbage, we can see the values of them are presented in UI. Then we scanned the unique QR code we prepared, all the data shown on the gauges in UI was initialized to 0.
+ ![image](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/66eb6f5b-a836-4d18-be5a-505d525703b5)
 ## 4. Project Photos & Screenshots
 - Project Photos:
 - ![IMG_8498](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/9c15b9a5-5bf4-448f-b8d2-d20b55a3be87)
