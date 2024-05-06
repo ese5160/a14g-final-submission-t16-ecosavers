@@ -128,7 +128,7 @@ We satisfy the requirements of user interfacing, monitoring, and functionality t
 - Top of PCBA
 - ![583400b14d58bda7c8317f491261574](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/ce89487d-aa47-4c94-9abb-42cca5762da6)
 - Bottom of PCBA
-- ![6ef747b942c67e4201e5aa9a895ed74](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/24a90785-67d5-499e-ac21-3a7d75a10793)
+- ![b1a20f435449854cc2d151fe51043fb](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/1639f881-59df-4811-9b90-d9fc3dd6d343)
 - Thermal camera image
 - ![4c8c3e6929d3146c0d70b8a4db238d2](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/eef2f32c-031c-43d3-8cda-eca6bedf7279)
 - 2D view of Altium
