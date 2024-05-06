@@ -21,22 +21,22 @@
 
 - Device Functionality
 - Sensors:
-   - Humidity and Temperature Sensor: This sensor detects the moisture content of the garbage deposited into the bin. It helps in distinguishing between wet and dry waste, facilitating accurate sorting. Also, this sensor measures the temperature of the garbage, providing additional data for waste classification and environmental monitoring.
+   - Humidity and Temperature Sensor: This sensor detects the level of humidity of the garbage deposited into the bin. It helps in distinguishing between wet and dry waste, facilitating accurate sorting. Also, this sensor measures the temperature of the garbage, providing additional data for waste classification and environmental monitoring, and preventing the risk caused by high-temperature waste.
 
 - Actuators:
-   - Stepper Motor: The stepper motor is responsible for driving the platform within the bin to facilitate automatic sorting. Based on the detection from the humidity and temperature sensors, the stepper motor adjusts the position of the platform to direct garbage into the appropriate bin.
+   - Stepper Motor: The stepper motor is responsible for driving the platform within the corresponding bin to facilitate automatic sorting. Based on the detection from the humidity and temperature sensor, the stepper motor adjusts the position of the platform to direct garbage into the appropriate bin.
 
 - Microcontroller (MCU):
-   - A microcontroller serves as the brain of the smart bin, coordinating the operation of sensors, actuators, and other components. It processes data from sensors, executes sorting algorithms, and controls the movement of the stepper motor.
+   - A microcontroller serves as the brain of the smart bin, coordinating the operation of sensors, actuators, and other related components. It processes data detected from sensors, executes sorting algorithms, and controls the movement of the stepper motor.
 
 - Connectivity Module:
-   - Wi-Fi Module: An onboard Wi-Fi module enables Internet connectivity, allowing the smart bin to communicate with external devices and platforms. It facilitates data transmission to cloud-based servers for analysis and enables remote monitoring and control via web or mobile applications.
+   - Wi-Fi Module: An onboard Wi-Fi module enables Internet connectivity, allowing the smart bin to communicate with external devices and platforms. It facilitates data transmission to cloud-based servers for analysis and enables remote monitoring and control via web or mobile applications such as Node-RED.
 
 - User Interface:
    - Web: A user-friendly interface accessible through web provides users with real-time data on waste composition and system performance.
 
 - Power Supply:
-   - Power Management Unit: A power management unit regulates the voltage supplied to various components of the smart bin, ensuring stable and efficient operation. It include a 5V boost and 3.3V buck for adjusting the system volatge to the volatge required for different components.
+   - Power Management Unit: A power management unit regulates the voltage supplied to various components of the smart bin, ensuring stable and efficient operation. It include a 5V boost and 3.3V buck for adjusting the system volatge to the what is required for different components.
 
 - QR Code:
    - QR Code Reader: A QR code scanner is integrated into the smart bin, allowing users to perform tasks such as resetting the status of the UI showing. Users can simply use the specific QR code and make it scaned by the QR code reader located on the bin.
@@ -46,10 +46,18 @@
 
 - Challenges
    - Where did you face difficulties? This could be in firmware, hardware, software, integration, etc.
+   - For the firmware, we encountered challenges reading bin file from SD card in bootloader. There was always the same error of memory shortage which caused whole program would stuck.
+   - For the hardware, we had difficulty using uart interface because we elected the pins with different SERCOMs.
    - How did you overcome these challenges?
+   - We removed unnecessary code from the task and release a lot memory of it
+   - We deleted the section of distance sensor which is needed uart as communication with MCU
 - Prototype Learnings
    - What lessons did you learn by building and testing this prototype?
+   - Firstly, it is significant for us to arrange the appropriate pin map at the beginning of designing a PCBA.
+   - The datasheet of every component is required to be checked carefully and the standard mentioned in the datasheet should be satisfied fully.
+   - It is necessary to test the power architecture when we get a new PCBA board to prevent inappropriate voltage causing damage on other components.
    - If you had to build this device again, what would you do differently?
+   - Firstly, I will select other buck chip because our buck chip doesn't work as expected so we used the buck dev board supported by teaching team. Additionally, I'll reconfigure the UART interface by rearranging the pins with selecting appropriate SERCOMs in the system.
 - Next Steps
    - Since the project is the prototype of our smart bin, for the next step, we can try to make it as the actual size of the garbage bin on the street to test the performance of the project.
    
@@ -139,6 +147,7 @@ We satisfy the requirements of user interfacing, monitoring, and functionality t
 - Node-RED Backend
 - ![image](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/a3103f60-7df5-438b-aae3-fc065aa91960)
 - Block Diagram
+- ![d212576f4a571209654ac763b374439](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/74052d34-b875-4944-b6fc-b38b061bf2fc)
 
 
 
