@@ -126,7 +126,7 @@ We satisfy the requirements of user interfacing, monitoring, and functionality t
 - ![IMG_8500](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/0cb3baad-e006-4a4f-91f0-09c5daf80209)
 - ![IMG_8502](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/ed49738e-6fd4-4608-91b7-45a35e2a5876)
 - Top of PCBA
-- ![ea157e222020d9a498f5d6245a434ee](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/93cb51f4-a0b3-48e9-9499-32bfb6efb8ba)
+- ![583400b14d58bda7c8317f491261574](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/ce89487d-aa47-4c94-9abb-42cca5762da6)
 - Bottom of PCBA
 - ![6ef747b942c67e4201e5aa9a895ed74](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/24a90785-67d5-499e-ac21-3a7d75a10793)
 - Thermal camera image
