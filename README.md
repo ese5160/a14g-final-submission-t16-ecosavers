@@ -24,13 +24,13 @@
    - Humidity and Temperature Sensor: This sensor detects the level of humidity of the garbage deposited into the bin. It helps in distinguishing between wet and dry waste, facilitating accurate sorting. Also, this sensor measures the temperature of the garbage, providing additional data for waste classification and environmental monitoring, and preventing the risk caused by high-temperature waste.
 
 - Actuators:
-   - Stepper Motor: The stepper motor is responsible for driving the platform within the corresponding bin to facilitate automatic sorting. Based on the detection from the humidity and temperature sensor, the stepper motor adjusts the position of the platform to direct garbage into the appropriate bin.
+   - Stepper Motor: The stepper motor is responsible for driving the platform within the corresponding bin to facilitate automatic sorting. Based on the detection from the humidity and temperature sensor, the stepper motor adjusts the position of the platform to direct garbage into the appropriate bin for sorting.
 
 - Microcontroller (MCU):
-   - A microcontroller serves as the brain of the smart bin, coordinating the operation of sensors, actuators, and other related components. It processes data detected from sensors, executes sorting algorithms, and controls the movement of the stepper motor.
+   - A microcontroller coordinates the operation of sensors, actuators, and other related components in the system, and It processes data detected from sensors, executes sorting algorithms, and controls the movement of the stepper motor.
 
 - Connectivity Module:
-   - Wi-Fi Module: An onboard Wi-Fi module enables Internet connectivity, allowing the smart bin to communicate with external devices and platforms. It facilitates data transmission to cloud-based servers for analysis and enables remote monitoring and control via web or mobile applications such as Node-RED.
+   - Wi-Fi Module: An onboard Wi-Fi module enables Internet connectivity, allowing the smart bin to communicate with external devices and platforms. Also, It facilitates data transmission to cloud-based servers for analysis and enables remote monitoring and control via web or mobile applications such as Node-RED.
 
 - User Interface:
    - Web: A user-friendly interface accessible through web provides users with real-time data on waste composition and system performance.
@@ -39,30 +39,24 @@
    - Power Management Unit: A power management unit regulates the voltage supplied to various components of the smart bin, ensuring stable and efficient operation. It include a 5V boost and 3.3V buck for adjusting the system volatge to the what is required for different components.
 
 - QR Code:
-   - QR Code Reader: A QR code scanner is integrated into the smart bin, allowing users to perform tasks such as resetting the status of the UI showing. Users can simply use the specific QR code and make it scaned by the QR code reader located on the bin.
+   - QR Code Reader: A QR code scanner is integrated into the smart bin, allowing users to perform tasks such as resetting the status of the UI showing for the bin, and users can simply use the specific QR code and make it scaned by the QR code reader located on the bin.
 
 - Cloud Platform:
    - Cloud Server: Data collected from the smart bin, including sensor readings, and user interactions, is transmitted to a cloud-based server for storage and analysis. It also helps user easy to control the system and update the firmware. Cloud-based analytics enable optimization of waste management strategies and provide insights for continuous improvement.
 
 - Challenges
-   - Where did you face difficulties? This could be in firmware, hardware, software, integration, etc.
-   - For the firmware, we encountered challenges reading bin file from SD card in bootloader. There was always the same error of memory shortage which caused whole program would stuck.
-   - For the hardware, we had difficulty using uart interface because we elected the pins with different SERCOMs.
-   - How did you overcome these challenges?
-   - We removed unnecessary code from the task and release a lot memory of it
-   - We deleted the section of distance sensor which is needed uart as communication with MCU
+   - For the firmware, we encountered challenges reading bin file from SD card in bootloader. There was always the same error of memory shortage which caused whole program would stuck. To overcome the memory shortage issue in the bootloader, we optimized the code by removing unnecessary tasks and freeing up memory, which do helps us to fix this error. Based on this method, the memory usage was optimized, allowing the program to execute without encountering memory shortages. Also, for the hardware, we had difficulty using uart interface because we elected the pins with different SERCOMs in our testing. To solve this problem, we made a comprehensive review of the hardware pin mapping and SERCOM configurations was conducted. By carefully reconfiguring the UART interface and selecting appropriate SERCOMs compatible with the chosen pins, the communication issues were resolved. 
+
 - Prototype Learnings
-   - What lessons did you learn by building and testing this prototype?
-   - Firstly, it is significant for us to arrange the appropriate pin map at the beginning of designing a PCBA.
-   - The datasheet of every component is required to be checked carefully and the standard mentioned in the datasheet should be satisfied fully.
-   - It is necessary to test the power architecture when we get a new PCBA board to prevent inappropriate voltage causing damage on other components.
-   - If you had to build this device again, what would you do differently?
-   - Firstly, I will select other buck chip because our buck chip doesn't work as expected so we used the buck dev board supported by teaching team. Additionally, I'll reconfigure the UART interface by rearranging the pins with selecting appropriate SERCOMs in the system.
+   - It is extremely important for us to arrange pin mappings at the beginning of designing a PCBA and thoroughly reviewing component datasheets was emphasized.  The datasheet of every component is required to be checked carefully and the standard mentioned in the datasheet should be satisfied fully. Following the datasheet specifications ensures compatibility and optimal performance of hardware components. Meanwhile, the testing of the power architecture on the board is crucial to prevent voltage-related issues that could potentially damage other components,and it can minimizes risks and ensures the reliability of the hardware design.
+   - If you had to build this device again, there would be lots of things to change in the beginnng of the design. First of all, we will select other buck chip for our power architecture because our buck chip does not work as expected. Beacuse of that,we had to use the buck dev board supported by teaching team. Others, we will reconfigure the UART interface by selecting appropriate SERCOMs and rearrange pins which might be undertaken to optimize communication efficiency and prevent conflicts in the system.
+
 - Next Steps
-   - Since the project is the prototype of our smart bin, for the next step, we can try to make it as the actual size of the garbage bin on the street to test the performance of the project.
+   - Since the project is the prototype of our smart bin, for the next step, we can try to make it as the actual size of the garbage bin on the street for comprehensive real-world testing for the performance of the project.
    
 - Takeaways from ESE5160
    - What did you learn in ESE5160 through the lectures, assignments, and this course-long prototyping project?
+   
 - Project Links
    - Provide a URL to your Node-RED instance for our review (make sure it’s running on your Azure instance!)
    - http://172.212.88.24:1880/
