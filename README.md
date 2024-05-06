@@ -51,7 +51,8 @@
    - What lessons did you learn by building and testing this prototype?
    - If you had to build this device again, what would you do differently?
 - Next Steps
-   - What steps are needed to finish or improve this project?
+   - Since the project is the prototype of our smart bin, for the next step, we can try to make it as the actual size of the garbage bin on the street to test the performance of the project.
+   
 - Takeaways from ESE5160
    - What did you learn in ESE5160 through the lectures, assignments, and this course-long prototyping project?
 - Project Links
