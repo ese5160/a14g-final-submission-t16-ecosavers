@@ -118,10 +118,34 @@ We satisfy the requirements of user interfacing, monitoring, and functionality t
  ![image](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/66eb6f5b-a836-4d18-be5a-505d525703b5)
 ## 4. Project Photos & Screenshots
 - Project Photos:
+- Photo of the final project
 - ![IMG_8498](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/9c15b9a5-5bf4-448f-b8d2-d20b55a3be87)
 - ![IMG_8503](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/d296a31f-806b-46aa-afff-4e076c79f219)
 - ![IMG_8500](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/0cb3baad-e006-4a4f-91f0-09c5daf80209)
 - ![IMG_8502](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/ed49738e-6fd4-4608-91b7-45a35e2a5876)
+- Top of PCBA
+- ![3fcac1b9e25a4fdbcb3eb0f52144e6b](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/72db6da2-e132-4c49-8287-45325c23f848)
+- Bottom of PCBA
+- ![6ef747b942c67e4201e5aa9a895ed74](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/24a90785-67d5-499e-ac21-3a7d75a10793)
+- Thermal camera image
+- ![4c8c3e6929d3146c0d70b8a4db238d2](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/eef2f32c-031c-43d3-8cda-eca6bedf7279)
+- 2D view of Altium
+- ![image](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/8724a835-8469-404a-a104-159c8a8e61c7)
+- 3D view of Altium
+- ![image](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/b8d09c9d-fd15-44fc-82d3-e21c0a018f3f)
+- Node-RED Dashboard
+- ![image](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/836025d7-2d3c-447b-8ae9-5e2f7b0dd396)
+- ![image](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/91c88c7a-b9d5-4c13-bb12-a5db71e5a5e7)
+- Node-RED Backend
+- ![image](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/a3103f60-7df5-438b-aae3-fc065aa91960)
+- Block Diagram
+
+
+
+
+
+
+
 
 
 
