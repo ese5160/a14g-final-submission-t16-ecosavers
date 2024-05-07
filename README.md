@@ -63,7 +63,8 @@
    - http://172.212.88.24:1880/ui/
    - Include a link to your A12G code repository
    - https://github.com/ese5160/a12g-firmware-drivers-t16-ecosavers.git
-
+   - Share link of PCBA
+   - https://upenn-eselabs.365.altium.com/designs/2FF92307-031D-4DDB-8BB3-53A011D22D0B
 
 ## 3. Hardware & Software Requirements
 -Hardware Requirements
@@ -85,14 +86,14 @@ The device served as the smart bin with integrated sensors and motors for automa
 
 - Review:
 We satisfy the requirements of automated garbage sorting and initialization by scanning QR code. However, we deleted the function of alerting user when the bin is full, because the TX and RX pin of uart were selected incorrectly in A01G.
-1. HRS_01: The on-board humidity and temperature sensor can detect the humidity of the garbage located on the platform and collect the moisture and the temperature into MCU. The data measured by the sensor will be printed in the Node Red UI, and the LED in UI will indicate what is the category of the garbage. In our testing, we put the dry paper and wet paper as the garbage close to the sensor, and the humidity and temperature were measured and presented in the terminal as showed below.
+1. HRS_01: We pass this requirement. The on-board humidity and temperature sensor can detect the humidity of the garbage located on the platform and collect the moisture and the temperature into MCU. The data measured by the sensor will be printed in the Node Red UI, and the LED in UI will indicate what is the category of the garbage. In our testing, we put the dry paper and wet paper as the garbage close to the sensor, and the humidity and temperature were measured and presented in the terminal as showed below.
 ![image](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/1e2d8824-788e-4e9f-90ff-bca24fbaf4f4)
 
-2. HRS_02: The direction of the stepper motor rotating can be controlled based on the humidity data measured by the sensor, which controls the garbage located on the platform slide down to corresponding bin. In our testing, we put the dry paper and wet paper as the garbage close to the sensor, and the stepper motor rotated clockwise or counter clockwise according to the humidity measured by the sensor.(Since the data can not be clearly presented for stepper motor, we attched the screenshot from video submitted which showes the different directions of stepper motor's motion.)
+2. HRS_02: We pass this requirement. The direction of the stepper motor rotating can be controlled based on the humidity data measured by the sensor, which controls the garbage located on the platform slide down to corresponding bin. In our testing, we put the dry paper and wet paper as the garbage close to the sensor, and the stepper motor rotated clockwise or counter clockwise according to the humidity measured by the sensor.(Since the data can not be clearly presented for stepper motor, we attched the screenshot from video submitted which showes the different directions of stepper motor's motion.)
 ![349e84c317e5fba6550cae867ad8dc0](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/2ea09d2c-d80a-4cb8-aa83-35ed7ca32ca3)
 ![ea157e222020d9a498f5d6245a434ee](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/87c98166-fbcf-4300-b81d-824c691c5f38)
 
-3. HRS_03: All the data on UI can be initialized to 0 after scanning the specific QR code. In our testing, we used a QR code whose content is the string of "R" and set a variable name p which represented the value of the readbuffer in I2C. In the process of debugging, we could see the value of p in the watch is ""(empty) when there is no QR code was scanned. Otherwise, the content of p became "R" which is consistent with the code.
+3. HRS_03: We pass this requirement. All the data on UI can be initialized to 0 after scanning the specific QR code. In our testing, we used a QR code whose content is the string of "R" and set a variable name p which represented the value of the readbuffer in I2C. In the process of debugging, we could see the value of p in the watch is ""(empty) when there is no QR code was scanned. Otherwise, the content of p became "R" which is consistent with the code. And the initialization was completed by the software part.
 ![image](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/de6ae793-85db-4ab3-b323-2f0008b0d833)
 ![image](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/46b276b4-ed1f-4036-bbf3-3261a03ad6fc)
 
@@ -114,10 +115,10 @@ The software used in this device shall include the user interface for control, m
 
 - Review:
 We satisfy the requirements of user interfacing, monitoring, and functionality to interact with the hardware. However, we failed the alert reception and notification for full bin capacity.
-1. SRS_01: Our device can transmit the integer data of current humidity and temperature to the Node Red and present them on UI page. In our testing, we put the dry paper and wet paper as the garbage close to the sensor, and the measurements of humidity and temperature were collected and presented on the two gauges in UI page which is consistent with what were showed in terminal.
+1. SRS_01: We pass this requirement. Our device can transmit the integer data of current humidity and temperature to cloud via Wifi and present them on UI page. In our testing, we put the dry paper and wet paper as the garbage close to the sensor, and the measurements of humidity and temperature were collected and presented on the two gauges in UI page which is consistent with what were showed in terminal.
 ![image](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/a3103f60-7df5-438b-aae3-fc065aa91960)
-2. SRS_02: We failed this requirement because we could not use our distance sensors. We removed the distance sensors from our system because the uart interface was selected incorrectly in A01G. 
-3. SRS_03: All the data on UI can be initialized to 0 after scanning the specific QR code. After testing the humidity and temperature of the garbage, we can see the values of them are presented in UI. Then we scanned the unique QR code we prepared, all the data shown on the gauges in UI was initialized to 0 after the content of the QR code was read by the scanner.
+2. SRS_02: We failed this requirement because we could not use our distance sensors. Therefore we removed the distance sensors from our system because the uart interface was selected incorrectly in A01G. 
+3. SRS_03: We pass this requirement. All the data on UI can be initialized to 0 after scanning the specific QR code. After testing the humidity and temperature of the garbage, we can see the values of them are presented in UI. Then we scanned the unique QR code with the character "R" we prepared, the software started initialization once it detected the QR code scanned has the expected contents of "R". Then all the data shown on the gauges in UI was initialized to 0 after the QR code was read by the scanner.
  ![image](https://github.com/ese5160/a14g-final-submission-t16-ecosavers/assets/147103564/66eb6f5b-a836-4d18-be5a-505d525703b5)
 ## 4. Project Photos & Screenshots
 - Project Photos:
